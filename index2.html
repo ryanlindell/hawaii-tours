@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawaii Adventure Tours | Authentic Local Experiences</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Optional: Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Aloha Adventures</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#tours">Tours</a>
+                <a href="#trails">Trails</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact" class="cta-button">Book Now</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Image Slider -->
+    <section class="hero-slider">
+        <div class="slide current">
+            <div class="content">
+                <h1>Discover Hawaii's Hidden Treasures</h1>
+                <p>Expert-guided tours through Oahu's most breathtaking landscapes</p>
+                <a href="#tours" class="cta-button">Explore Tours</a>
+            </div>
+            <div class="image" style="background-image: url('images/hawaii-mountains-1.jpg')"></div>
+        </div>
+        <!-- Additional slides -->
+        <div class="slide">
+            <div class="content">
+                <h1>Experience Paradise Like a Local</h1>
+                <p>From lush valleys to hidden waterfalls</p>
+                <a href="#tours" class="cta-button">Explore Tours</a>
+            </div>
+            <div class="image" style="background-image: url('images/hawaii-waterfall.jpg')"></div>
+        </div>
+        <!-- More slides as needed -->
+        
+        <div class="slider-controls">
+            <button class="prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Guide to Hawaii's Natural Wonders</h2>
+                <p class="subtitle">Local expertise. Unforgettable experiences.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Aloha! I'm [Your Name], born and raised on the beautiful island of Oahu. For over [X] years, I've been sharing my homeland's hidden gems with visitors seeking authentic Hawaiian experiences.</p>
+                    <p>My tours go beyond tourist hotspots to reveal the true magic of our islands - pristine rainforests, secret swimming holes, ancient trails, and breathtaking vistas known primarily to locals.</p>
+                    <p>Whether you're an experienced hiker seeking adventure or a family looking for accessible natural beauty, my personalized tours offer unforgettable memories of Hawaii's spectacular landscapes.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/hawaii-trail.jpg" alt="Hiking trail in Hawaii">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tours Section -->
+    <section id="tours" class="tours-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Our Tours</h2>
+                <p class="subtitle">Curated experiences for every adventure level</p>
+            </div>
+            <div class="tours-grid">
+                <!-- Tour Card 1 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/hawaii-waterfall.jpg" alt="Hidden Waterfall Tour">
+                        <div class="difficulty"><span>Moderate</span></div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Hidden Waterfall Adventure</h3>
+                        <p class="tour-duration"><i class="fas fa-clock"></i> 4-5 hours</p>
+                        <p class="tour-description">Discover secluded waterfalls nestled in lush valleys, with opportunities for swimming in crystal clear pools.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-mountain"></i> Rainforest</span>
+                            <span><i class="fas fa-water"></i> Swimming</span>
+                            <span><i class="fas fa-camera"></i> Photography</span>
+                        </div>
+                        <a href="#" class="tour-button">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Additional tour cards -->
+                <!-- You can duplicate and modify this structure for each tour -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Trail Map Section -->
+    <section id="trails" class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Trail Network</h2>
+                <p class="subtitle">Explore the paths less traveled</p>
+            </div>
+            <div class="map-container">
+                <img src="images/hawaii-map.jpg" alt="Trail Map" class="trail-map">
+                <!-- We could enhance this with an interactive map later -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hawaii Through Our Lens</h2>
+                <p class="subtitle">Capturing the beauty of the islands</p>
+            </div>
+            <div class="gallery-grid">
+                <!-- Gallery images - these will be clickable to open a lightbox -->
+                <div class="gallery-item">
+                    <img src="images/hawaii-mountains-1.jpg" alt="Mountain vista in Hawaii">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/hawaii-rainbow-mountain.jpg" alt="Rainbow over mountains">
+                </div>
+                <!-- Add more gallery items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Guests Say</h2>
+                <p class="subtitle">Memories that last a lifetime</p>
+            </div>
+            <div class="testimonials-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Our guide knew exactly when to visit each location to avoid crowds and get the best lighting for photos. The waterfall hike was the highlight of our entire Hawaii trip!"</p>
+                        <div class="testimonial-author">
+                            <p class="name">Sarah T.</p>
+                            <p class="origin">California</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- More testimonials -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Booking Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Book Your Adventure</h2>
+                <p class="subtitle">Begin your Hawaiian journey</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <p><i class="fas fa-phone"></i> (808) XXX-XXXX</p>
+                    <p><i class="fas fa-envelope"></i> info@your-hawaii-tours.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="booking-form">
+                    <form id="inquiry-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tour">Preferred Tour</label>
+                            <select id="tour" name="tour">
+                                <option value="">Select a tour</option>
+                                <option value="waterfall">Hidden Waterfall Adventure</option>
+                                <!-- Add more options based on your tours -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Aloha Adventures</h3>
+                    <p>Authentic Hawaiian experiences since [Year]</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <a href="#about">About</a>
+                        <a href="#tours">Tours</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="#">Travel Tips</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Aloha Adventures. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
