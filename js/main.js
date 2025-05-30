@@ -55,28 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentSlide + 1);
     }, 5000);
     
-    // Form submission
-    const form = document.getElementById('inquiry-form');
-    
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(form);
-            const formProps = Object.fromEntries(formData);
-            
-            // In a real application, you would send this data to your server
-            console.log('Form submitted:', formProps);
-            
-            // Show success message
-            alert('Thank you for your inquiry! We will contact you soon.');
-            
-            // Reset form
-            form.reset();
-        });
-    }
-    
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {

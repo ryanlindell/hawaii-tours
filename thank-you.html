@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .thank-you-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      background: linear-gradient(to right, var(--primary-color), #236b42);
+      color: white;
+      padding: 2rem;
+    }
+
+    .thank-you-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: var(--box-shadow);
+      max-width: 600px;
+    }
+
+    .thank-you-box h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .thank-you-box p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .thank-you-box .cta-button {
+      background-color: white;
+      color: var(--primary-color);
+    }
+
+    .thank-you-box .cta-button:hover {
+      background-color: var(--accent-color);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <section class="thank-you-page">
+    <div class="thank-you-box">
+      <h1>Thank You!</h1>
+      <p>Your submission has been received. We'll be in touch shortly.</p>
+      <a href="index.html" class="cta-button">Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>
