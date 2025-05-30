@@ -3,514 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aloha Hawaii Tours - Your Personal Guide to Paradise</title>
-    <style>
-        /* Base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header styles */
-        header {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/600') center/cover no-repeat;
-            color: white;
-            padding: 150px 0;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-        
-        /* Navigation */
-        nav {
-            background-color: #2c3e50;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin: 0 15px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 5px 10px;
-            border-radius: 3px;
-            transition: background-color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            background-color: #3498db;
-        }
-        
-        /* Button styles */
-        .btn {
-            display: inline-block;
-            background-color: #3498db;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #2980b9;
-        }
-        
-        /* Section styles */
-        section {
-            padding: 80px 0;
-        }
-        
-        section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #2c3e50;
-        }
-        
-        /* Services section */
-        .services {
-            background-color: white;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .service-content {
-            padding: 20px;
-        }
-        
-        .service-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-        
-        .price {
-            font-size: 1.2rem;
-            color: #3498db;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-        
-        /* About section */
-        .about {
-            background-color: #f8f9fa;
-        }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-image {
-            flex: 1;
-        }
-        
-        .about-image img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            background-color: #3498db;
-            color: white;
-        }
-        
-        .testimonials h2 {
-            color: white;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .testimonial-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 8px;
-            position: relative;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-        }
-        
-        /* Contact */
-        .contact-form {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            height: 150px;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            padding: 50px 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-            text-align: left;
-        }
-        
-        .footer-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .footer-section p {
-            margin-bottom: 10px;
-        }
-        
-        .social-links a {
-            color: white;
-            margin-right: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .copyright {
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            header {
-                padding: 100px 0;
-            }
-            
-            header h1 {
-                font-size: 2.5rem;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav ul li {
-                margin: 5px 0;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            section h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <title>Hawaii Adventure Tours | Authentic Local Experiences</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Optional: Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav class="navbar">
         <div class="container">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Tours</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Book Now</a></li>
-            </ul>
+            <a href="#" class="logo">Aloha Adventures</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#tours">Tours</a>
+                <a href="#trails">Trails</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact" class="cta-button">Book Now</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header id="home">
-        <div class="container">
-            <h1>Discover The Magic of Hawaii</h1>
-            <p>Expert-guided tours to the most beautiful and hidden spots across the Hawaiian Islands</p>
-            <a href="#contact" class="btn">Book Your Adventure</a>
+    <!-- Hero Section with Image Slider -->
+    <section class="hero-slider">
+        <div class="slide current">
+            <div class="content">
+                <h1>Discover Hawaii's Hidden Treasures</h1>
+                <p>Expert-guided tours through Oahu's most breathtaking landscapes</p>
+                <a href="#tours" class="cta-button">Explore Tours</a>
+            </div>
+            <div class="image" style="background-image: url('images/olomana.jpg')"></div>
         </div>
-    </header>
+        <div class="slide">
+            <div class="content">
+                <h1>Experience Paradise Like a Local</h1>
+                <p>From lush valleys to hidden waterfalls</p>
+                <a href="#tours" class="cta-button">Explore Tours</a>
+            </div>
+            <div class="image" style="background-image: url('images/rainbow.jpeg')"></div>
+        </div>
+        <div class="slide">
+            <div class="content">
+                <h1>Experience Paradise Like a Local</h1>
+                <p>From lush valleys to hidden waterfalls</p>
+                <a href="#tours" class="cta-button">Explore Tours</a>
+            </div>
+            <div class="image" style="background-image: url('images/sunset.png')"></div>
+        </div>
+        <div class="slide">
+            <div class="content">
+                <h1>Experience Paradise Like a Local</h1>
+                <p>From lush valleys to hidden waterfalls</p>
+                <a href="#tours" class="cta-button">Explore Tours</a>
+            </div>
+            <div class="image" style="background-image: url('images/IMG_2375.JPG')"></div>
+        </div>
+        
+        <div class="slider-controls">
+            <button class="prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- About Section -->
+    <section id="about" class="about-section">
         <div class="container">
-            <h2>Our Tours</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="/api/placeholder/400/250" alt="Oahu Tour">
-                    <div class="service-content">
-                        <h3>Oahu Paradise Experience</h3>
-                        <p>Explore the vibrant heart of Hawaii with our comprehensive Oahu tour. Visit Pearl Harbor, hike Diamond Head, and enjoy Waikiki Beach.</p>
-                        <p class="price">From $129 per person</p>
-                        <a href="#contact" class="btn">Book Now</a>
+            <div class="section-header">
+                <h2>Your Guide to Hawaii's Natural Wonders</h2>
+                <p class="subtitle">Local expertise. Unforgettable experiences.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Aloha! We're Ryan and Maddux, born and raised on the beautiful island of Oʻahu. For over four years, we've been exploring the hidden corners of our island and sharing that journey with visitors seeking more than the typical tourist path.</p>
+                    <p>Our tours go beyond the crowded spots to reveal the true essence of Oʻahu—lush rainforests, secluded waterfalls, quiet ridgelines, and natural swimming holes known mostly to locals.</p>
+                    <p>Whether you're a seasoned adventurer or a family looking to connect with the island’s beauty at your own pace, our guided experiences are designed to create unforgettable memories rooted in the real Hawai‘i.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/tours.jpg" alt="Hiking trail in Hawaii">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tours Section -->
+    <section id="tours" class="tours-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Our Tours</h2>
+                <p class="subtitle">Curated experiences custom chosen for every adventure, level, and taste</p>
+            </div>
+            <div class="tours-grid">
+                <!-- Tour Card 1: Hidden Hikes -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/IMG_2390.JPG" alt="Hidden Hike Tour">
+                        <div class="difficulty"><span>Moderate</span></div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Hidden Hikes: Ridges, Valleys and Waterfalls</h3>
+                        <p class="tour-duration"><i class="fas fa-clock"></i> 2–10 hours</p>
+                        <p class="tour-description">Trek through remote rainforest ridgelines and down into lush valleys to explore hidden waterfalls and panoramic views. Great for photographers and nature lovers.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-hiking"></i> Hiking</span>
+                            <span><i class="fas fa-binoculars"></i> Wildlife Viewing</span>
+                            <span><i class="fas fa-camera"></i> Scenic Spots</span>
+                        </div>
+                        <a href="#" class="tour-button">View Details</a>
                     </div>
                 </div>
-                
-                <div class="service-card">
-                    <img src="/api/placeholder/400/250" alt="Maui Tour">
-                    <div class="service-content">
-                        <h3>Maui Magic Tour</h3>
-                        <p>Experience the Road to Hana, watch the sunrise at Haleakala, and snorkel in Molokini Crater on this unforgettable Maui adventure.</p>
-                        <p class="price">From $149 per person</p>
-                        <a href="#contact" class="btn">Book Now</a>
+
+                <!-- Tour Card 2: Rock Climbing -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/rock climbing/IMG_3683.JPG" alt="Rock Climbing">
+                        <div class="difficulty"><span>Challenging</span></div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Outdoor Rock Climbing</h3>
+                        <p class="tour-duration"><i class="fas fa-clock"></i> 3–4 hours</p>
+                        <p class="tour-description">Climb natural rock faces in stunning outdoor settings with expert guidance and all gear provided. Suitable for beginners and intermediate climbers alike.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-user-shield"></i> Certified Guides</span>
+                            <span><i class="fas fa-hands-helping"></i> Safety Gear Included</span>
+                            <span><i class="fas fa-mountain"></i> Vertical Adventure</span>
+                        </div>
+                        <a href="#" class="tour-button">View Details</a>
                     </div>
                 </div>
-                
-                <div class="service-card">
-                    <img src="/api/placeholder/400/250" alt="Big Island Tour">
-                    <div class="service-content">
-                        <h3>Big Island Volcano Adventure</h3>
-                        <p>Witness the power of Kilauea Volcano, explore lava tubes, and relax on the famous black sand beaches of the Big Island.</p>
-                        <p class="price">From $159 per person</p>
-                        <a href="#contact" class="btn">Book Now</a>
+
+                <!-- Tour Card 3: Waterfall Repels -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/FullSizeRender.JPG" alt="Waterfall Rappelling">
+                        <div class="difficulty"><span>Adventurous</span></div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Waterfall Rappels (WIP)</h3>
+                        <p class="tour-duration"><i class="fas fa-clock"></i> 2–3 hours</p>
+                        <p class="tour-description">Rappel down flowing waterfalls surrounded by jungle cliffs. This wet and wild tour combines canyoning and rope skills for thrill-seekers.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-water"></i> Rappelling</span>
+                            <span><i class="fas fa-helmet-safety"></i> Gear Provided</span>
+                            <span><i class="fas fa-tint"></i> Water Adventure</span>
+                        </div>
+                        <a href="#" class="tour-button">View Details</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+
+    <!-- Interactive Trail Map Section -->
+    <!-- <section id="trails" class="map-section">
         <div class="container">
-            <h2>About Your Guide</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Aloha! I'm [Your Name], a Hawaii-born guide with over 10 years of experience sharing the beauty and culture of these islands with visitors from around the world.</p>
-                    <p>Having grown up exploring every corner of Hawaii, I know all the hidden gems and local favorites that you won't find in typical tourist guides. My tours combine adventure, education, and authentic Hawaiian experiences.</p>
-                    <p>I'm passionate about sustainable tourism and ensuring that visitors experience the true spirit of aloha while respecting our precious natural environment.</p>
-                    <p>Whether you're looking for adventure, relaxation, cultural experiences, or a mix of everything, I'll create an unforgettable Hawaiian experience tailored just for you.</p>
+            <div class="section-header">
+                <h2>Our Trail Network</h2>
+                <p class="subtitle">Explore the paths less traveled</p>
+            </div>
+            <div class="map-container">
+                <img src="images/hawaii-map.jpg" alt="Trail Map" class="trail-map">
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hawaii Through Our Lens</h2>
+                <p class="subtitle">Capturing the beauty of the islands</p>
+            </div>
+            <div class="gallery-grid">
+                <!-- Gallery images - these will be clickable to open a lightbox -->
+                <div class="gallery-item">
+                    <img src="images/waterfall.jpeg" alt="Mountain vista in Hawaii">
                 </div>
-                <div class="about-image">
-                    <img src="/api/placeholder/500/400" alt="Tour Guide">
+                <div class="gallery-item">
+                    <img src="images/mountains.jpeg" alt="Rainbow over mountains">
                 </div>
+                <div class="gallery-item">
+                    <img src="images/olomanaSunset.jpeg" alt="Rainbow over mountains">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/fog.jpg" alt="Rainbow over mountains">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_2289.JPG" alt="Rainbow over mountains">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_2379.JPG" alt="Rainbow over mountains">
+                </div>
+                <!-- Add more gallery items -->
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials-section">
         <div class="container">
-            <h2>What Our Visitors Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Our guide showed us places we never would have found on our own. The local knowledge and stories made our trip to Hawaii truly special."</p>
-                    <p class="testimonial-author">- Sarah J., California</p>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Worth every penny! We saw the real Hawaii beyond the tourist traps. Our guide was knowledgeable, friendly, and accommodating."</p>
-                    <p class="testimonial-author">- Mike T., Canada</p>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The personalized attention and insider access to lesser-known spots made this the highlight of our Hawaiian vacation."</p>
-                    <p class="testimonial-author">- Yuko H., Japan</p>
+            <div class="section-header">
+                <h2>What Our Guests Say</h2>
+                <p class="subtitle">Memories that last a lifetime</p>
+            </div>
+            <div class="testimonials-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"lets get our friends on some hikes and get them to write these cuz that would be very good for the credibility of the site"</p>
+                        <div class="testimonial-author">
+                            <p class="name">Anon P.</p>
+                            <p class="origin">Antartica</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact/Booking Section -->
-    <section id="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2>Book Your Tour</h2>
-            <div class="contact-form">
-                <form id="booking-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
+            <div class="section-header">
+                <h2>Book Your Adventure</h2>
+                <p class="subtitle">Begin your Hawaiian journey</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <p><i class="fas fa-phone"></i> (808) 253-9231</p>
+                    <p><i class="fas fa-envelope"></i> AlohaAscents@gmail.com</p>
+                    <div class="social-links">
+                        <!-- <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a> -->
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="tour">Select Tour</label>
-                        <select id="tour" name="tour">
-                            <option value="oahu">Oahu Paradise Experience</option>
-                            <option value="maui">Maui Magic Tour</option>
-                            <option value="big-island">Big Island Volcano Adventure</option>
-                            <option value="custom">Custom Tour</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="date">Preferred Date</label>
-                        <input type="date" id="date" name="date">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="group-size">Group Size</label>
-                        <input type="number" id="group-size" name="group-size" min="1" max="20">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Special Requests or Questions</label>
-                        <textarea id="message" name="message"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn">Submit Booking Request</button>
-                </form>
+                </div>
+                <div class="booking-form">
+                    <form id="inquiry-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tour">Preferred Tour</label>
+                            <select id="tour" name="tour" required>
+                                <option value="" disabled selected hidden>Select a tour</option>
+                                <option value="hikes">Hikes</option>
+                                <option value="rock-climbing">Rock climbing guide</option>
+                                <option value="waterfall-repel">Waterfall repels</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Inquiry</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Aloha Hawaii Tours</h3>
-                    <p>Providing authentic Hawaiian experiences since [Year]</p>
-                    <p>Your gateway to paradise</p>
+                <div class="footer-logo">
+                    <h3>Aloha Adventures</h3>
+                    <p>Authentic Hawaiian experiences since 2022</p>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p>Email: info@alohahawaiitoursexample.com</p>
-                    <p>Phone: (808) 123-4567</p>
-                    <p>Address: Honolulu, Hawaii</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">TripAdvisor</a>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <a href="#about">About</a>
+                        <a href="#tours">Tours</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="#">Travel Tips</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 Aloha Hawaii Tours. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aloha Adventures. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Simple form handling
-        document.getElementById('booking-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your booking request! We will contact you within 24 hours to confirm your tour details.');
-            this.reset();
-        });
-        
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
