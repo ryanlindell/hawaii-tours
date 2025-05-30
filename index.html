@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hawaii Adventure Tours | Authentic Local Experiences</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Optional: Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">Aloha Adventures</a>
+            <a href="#" class="logo">Aloha Ascents</a>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#tours">Tours</a>
@@ -111,7 +111,7 @@
                             <span><i class="fas fa-binoculars"></i> Wildlife Viewing</span>
                             <span><i class="fas fa-camera"></i> Scenic Spots</span>
                         </div>
-                        <a href="#" class="tour-button">View Details</a>
+                        <a href="hike_tours.html" class="tour-button">View Details</a>
                     </div>
                 </div>
 
@@ -130,7 +130,7 @@
                             <span><i class="fas fa-hands-helping"></i> Safety Gear Included</span>
                             <span><i class="fas fa-mountain"></i> Vertical Adventure</span>
                         </div>
-                        <a href="#" class="tour-button">View Details</a>
+                        <a href="rock_climbing.html" class="tour-button">View Details</a>
                     </div>
                 </div>
 
@@ -149,7 +149,7 @@
                             <span><i class="fas fa-helmet-safety"></i> Gear Provided</span>
                             <span><i class="fas fa-tint"></i> Water Adventure</span>
                         </div>
-                        <a href="#" class="tour-button">View Details</a>
+                        <a href="repeling_tours.html" class="tour-button">View Details</a>
                     </div>
                 </div>
             </div>
@@ -180,24 +180,35 @@
             <div class="gallery-grid">
                 <!-- Gallery images - these will be clickable to open a lightbox -->
                 <div class="gallery-item">
-                    <img src="images/waterfall.jpeg" alt="Mountain vista in Hawaii">
+                    <a href="images/waterfall.jpeg" data-lightbox="gallery" data-title="Waterfall swim spot">
+                        <img src="images/waterfall.jpeg">
+                    </a>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/mountains.jpeg" alt="Rainbow over mountains">
+                    <a href="images/mountains.jpeg" data-lightbox="gallery" data-title="Mountain vista in Hawaii">
+                        <img src="images/mountains.jpeg">
+                    </a>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/olomanaSunset.jpeg" alt="Rainbow over mountains">
+                    <a href="images/olomanaSunset.jpeg" data-lightbox="gallery" data-title="Sunset over peaks of mountains">
+                        <img src="images/olomanaSunset.jpeg">
+                        </a>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/fog.jpg" alt="Rainbow over mountains">
+                    <a href="images/fog.jpg" data-lightbox="gallery" data-title="Looking into the fog">
+                        <img src="images/fog.jpg">
+                    </a>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/IMG_2289.JPG" alt="Rainbow over mountains">
+                    <a href="images/IMG_2289.JPG" data-lightbox="gallery" data-title="Hikes on the ridgelines">
+                        <img src="images/IMG_2289.JPG">
+                    </a>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/IMG_2379.JPG" alt="Rainbow over mountains">
+                    <a href="images/IMG_2379.JPG" data-lightbox="gallery" data-title="Up in the clouds">
+                        <img src="images/IMG_2379.JPG">
+                    </a>
                 </div>
-                <!-- Add more gallery items -->
             </div>
         </div>
     </section>
@@ -243,35 +254,39 @@
                     </div>
                 </div>
                 <div class="booking-form">
-                    <form id="inquiry-form">
+                    <form id="inquiry-form" action="https://formspree.io/f/xdkzndyd" method="POST">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="tour">Preferred Tour</label>
-                            <select id="tour" name="tour" required>
-                                <option value="" disabled selected hidden>Select a tour</option>
-                                <option value="hikes">Hikes</option>
-                                <option value="rock-climbing">Rock climbing guide</option>
-                                <option value="waterfall-repel">Waterfall repels</option>
-                            </select>
+                        <label for="tour">Preferred Tour</label>
+                        <select id="tour" name="tour" required>
+                            <option value="" disabled selected hidden>Select a tour</option>
+                            <option value="hikes">Hikes</option>
+                            <option value="rock-climbing">Rock climbing guide</option>
+                            <option value="waterfall-repel">Waterfall repels</option>
+                        </select>
                         </div>
                         <div class="form-group">
-                            <label for="date">Preferred Date</label>
-                            <input type="date" id="date" name="date">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date">
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
                         </div>
+
+                        <input type="text" name="_gotcha" style="display:none">
+                        <input type="hidden" name="_next" value="https://alohaascents.com/thank-you.html">
+
                         <button type="submit" class="submit-button">Send Inquiry</button>
                     </form>
-                </div>
+                    </div>
             </div>
         </div>
     </section>
@@ -294,10 +309,10 @@
                     </div>
                     <div class="link-group">
                         <h4>Resources</h4>
-                        <a href="#">Travel Tips</a>
-                        <a href="#">FAQ</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
+                        <a href="travel_tips.html">Travel Tips</a>
+                        <!-- <a href="faq.html">FAQ</a> -->
+                        <!-- <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a> -->
                     </div>
                 </div>
             </div>
@@ -309,5 +324,6 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
